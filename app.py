@@ -21,8 +21,10 @@ mongo = PyMongo(app)
 @app.route("/get_tasks")
 def get_tasks():
     print("hello world again")
-    tasks = mongo.db.tasks.find()
-    return render_template("tasks.html", tasks=tasks)
+    categories = mongo.db.categories.find()
+    print(categories)
+
+    return render_template("tasks.html", categories=categories)
 
 
 if __name__ == "__main__":
