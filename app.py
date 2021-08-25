@@ -20,6 +20,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_tasks")
 def get_tasks():
+    print("hello world again")
     tasks = mongo.db.tasks.find()
     return render_template("tasks.html", tasks=tasks)
 
@@ -27,5 +28,5 @@ def get_tasks():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
-            
+            debug=True)  
+                     
