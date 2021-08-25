@@ -6,13 +6,12 @@
     <title>Task Manger</title>
 </head>
 <body>
-    hello123
-    {% for category in categories %}
-        {{ category.category_name }} <br>
-    {% endfor %}
-
     {% for task in tasks %}
-    {{ task }}
+        {{ task.category_name }} <br>
+        {{ task.task_name }} <br>
+        {{ task.due_date }} <br>
+        {{ task.is_urgent }} <br>
+        {{ task.task_description }} <br>
     {% endfor %}
 </body>
 </html>
