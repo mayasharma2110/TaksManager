@@ -23,8 +23,10 @@ def get_tasks():
     print("hello world again")
     categories = mongo.db.categories.find()
     print(categories)
+    tasks = mongo.db.tasks.find()
+    print(tasks)
 
-    return render_template("tasks.html", categories=categories)
+    return render_template("tasks.html", categories=categories, tasks=tasks)
 
 
 if __name__ == "__main__":
